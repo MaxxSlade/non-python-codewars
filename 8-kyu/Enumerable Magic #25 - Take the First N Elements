@@ -1,0 +1,16 @@
+function take(arr, n) {
+  if (n == 0 || arr.length == 0) {
+    return []
+  } else if (arr.length <= n) {
+    return arr
+  } else {
+    return arr.slice(0,n);
+  } 
+}
+
+
+-----------------------------------------
+
+function take(arr, n) {
+  return (n == 0 || arr.length == 0) ? [] : (arr.length <= n) ? arr : arr.slice(0,n);
+}
