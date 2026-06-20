@@ -14,3 +14,7 @@ function take(arr, n) {
 function take(arr, n) {
   return (n == 0 || arr.length == 0) ? [] : (arr.length <= n) ? arr : arr.slice(0,n);
 }
+
+
+// Yeah I overcomplicated the fuck out of this when, all I needed to do was: 
+return arr.slice(0,n); // :c
