@@ -1,0 +1,15 @@
+#include <string>
+#include <sstream>
+#include <iostream>
+#include <cctype>
+
+std::string abbrevName(std::string name){
+  std::stringstream ss(name);
+  std::string first;
+  std::string last;
+  
+  ss >> first >> last;
+  
+  return std::string(1, (char)std::toupper(first[0])) + '.' + (char)std::toupper(last[0]);
+  
+}
