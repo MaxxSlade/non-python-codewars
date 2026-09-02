@@ -1,0 +1,10 @@
+#include <iostream>
+bool is_cube(int volume, int side){
+    int cube_volume = ((side * side) * side);
+    
+    if (volume == cube_volume && side > 0){
+      return true;
+    } else {
+      return false;
+    }
+}
