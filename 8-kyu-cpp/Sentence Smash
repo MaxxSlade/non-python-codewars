@@ -1,0 +1,15 @@
+#include <vector>
+#include <string>
+
+std::string smash(const std::vector<std::string>& words){
+  std::string result = "";
+  
+  for (std::string x: words) {
+    result.append(x);
+    if (x != words.back()) {
+        result.append(" ");
+      }
+  }
+  
+   return result;
+}
