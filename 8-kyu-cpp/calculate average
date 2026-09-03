@@ -1,0 +1,12 @@
+#include <vector>
+
+double calc_average(const std::vector<double>& values){
+  if (values.empty()) {return 0;}
+  
+  double sum {0.00};
+  for (double x: values) {
+    sum += x;
+  }
+  
+  return sum/(values.size());
+}
