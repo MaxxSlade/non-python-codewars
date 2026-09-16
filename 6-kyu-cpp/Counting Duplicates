@@ -1,0 +1,26 @@
+#include <string>
+#include <bits/stdc++.h>
+#include <cctype>
+
+std::size_t duplicateCount(const std::string& in){
+  std::string lower;
+  std::string dupes; 
+  int totalDupes = 0;
+  
+  for(auto& x : in) {
+    lower += std::tolower(x);
+  }
+  
+  std::cout << lower << std::endl;
+  
+  for(int x = 0; x < lower.size(); x++){
+    auto dupeCount = count(lower.begin(), lower.end(), lower[x]);
+      
+    if (dupeCount > 1 && dupes.find(lower[x]) == std::string::npos) {
+      dupes += lower[x];
+      totalDupes += 1;
+    }
+  }
+  
+  return totalDupes;
+}
