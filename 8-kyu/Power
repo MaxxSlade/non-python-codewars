@@ -1,0 +1,7 @@
+function numberToPower(number, power){
+  result = 1;
+  for (i=0; i<power; i++) {
+    result *= number;
+  }
+  return result;
+}
